@@ -6,8 +6,8 @@ services:
       - 5432:5432
     environment:
       - POSTGRES_USER=docker
-      - POSTGRES_PASSWORD=ignite
-      - POSTGRES_DB=ignite
+      - POSTGRES_PASSWORD=gymder
+      - POSTGRES_DB=gymder
     volumes:
       - pgdata:/data/postgres
 
