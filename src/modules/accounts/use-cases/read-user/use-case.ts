@@ -1,7 +1,6 @@
 import { inject, injectable } from 'tsyringe';
 import { AppError } from '@errors/AppError';
 import { IUsersRepository } from '@modules/accounts/repositories/IUsersRepository';
-import { User } from '@modules/accounts/infra/typeorm/entities/user';
 import { IBaseUserDTO } from '@modules/accounts/dtos/IBaseUserDTO';
 import { verify } from 'jsonwebtoken';
 
