@@ -3,7 +3,7 @@ import { usersRoutes } from './users.routes';
 
 const router = express();
 
-router.use('/users', usersRoutes);
+router.use('/user', usersRoutes);
 
 router.get('/', (req: Request, res: Response) => (res.send('this is working !')));
 
