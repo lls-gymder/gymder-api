@@ -1,6 +1,4 @@
-import 'reflect-metadata';
 import express, { Request, Response } from 'express';
-import 'express-async-errors';
 
 import { errorHandler } from '@middlewares/error-handler';
 import router from './routes';
