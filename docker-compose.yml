@@ -11,12 +11,12 @@ services:
     volumes:
       - pgdata:/data/postgres
 
-  app:
+  api:
     build: .
     ports:
       - 3333:3333
     volumes:
-      - .:/app
+      - .:/api
 
 volumes:
   pgdata:

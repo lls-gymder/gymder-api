@@ -1,10 +1,16 @@
-import express, { Request, Response } from 'express';
+import 'reflect-metadata';
+import express from 'express';
+import 'express-async-errors';
 
 import { errorHandler } from '@middlewares/error-handler';
+
 import router from './routes';
+import dotEnv from 'dotenv';
 
 import './database';
 import './shared/tsyringe-container';
+
+dotEnv.config();
 
 const app = express();
 
@@ -14,6 +20,8 @@ app.use(router);
 
 app.use(errorHandler);
 
-app.get('/', (req: Request, res: Response) => (res.send('this is working somehow')));
+app.listen(process.env.PORT);
+
+console.info(`app running on port: http://localhost:${process.env.PORT}/`);
 
 export default app;
